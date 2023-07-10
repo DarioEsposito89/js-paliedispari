@@ -7,5 +7,16 @@
 // Dichiariamo chi ha vinto.
 
 // Chiedo prima di sceglieri pari o dispari e poi di inserire un numero da 1 a 5 all'utente
-let pariDispari = prompt("Scegli pari o dispari");
-let sceltaNumero = Number(prompt("Inserisci un numero da 1 a 5"));
+let evenOdd = prompt("Scegli pari o dispari");
+let choiceNumber = Number(prompt("Inserisci un numero da 1 a 5"));
+
+// funzione in cui si genera il numero random da 1 a 5 del pc
+function numeroPc(min, max) { 
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+let numRandomPc = parseInt(numeroPc(1, 5));
+console.log(`Il numero random del Pc è ${numRandomPc}`)
+// Somma numero utente e numero pc
+let summNum = choiceNumber + numRandomPc;
+console.log(`la somma dei numeri è ${summNum}`);
