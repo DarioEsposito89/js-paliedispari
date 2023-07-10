@@ -6,7 +6,7 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-// Chiedo prima di sceglieri pari o dispari e poi di inserire un numero da 1 a 5 all'utente
+// Chiedo prima di scegliere pari o dispari e poi di inserire un numero da 1 a 5 all'utente
 let evenOdd = prompt("Scegli pari o dispari");
 let choiceNumber = Number(prompt("Inserisci un numero da 1 a 5"));
 
