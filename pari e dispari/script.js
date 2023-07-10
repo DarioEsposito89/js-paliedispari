@@ -27,3 +27,19 @@ function isEven(number) {
         return true;
     }
 }
+
+// Condizione se la somma dei numeri è pari il valore è "pari", altrimenti è "dispari"
+if(isEven(summNum)){
+    summNum = "pari";
+} else {
+    summNum = "dispari";
+}
+
+// condizioni per vedere se l'utente ha vinto oppre no
+if (summNum = "pari" && evenOdd === "pari") {
+    console.log("Hai vinto!");
+} else if (summNum = "dispari" && evenOdd === "dispari"){
+    console.log("Hai vinto!");
+} else {
+    console.log("Hai perso, riprova!");
+}
