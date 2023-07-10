@@ -20,3 +20,10 @@ console.log(`Il numero random del Pc è ${numRandomPc}`)
 // Somma numero utente e numero pc
 let summNum = choiceNumber + numRandomPc;
 console.log(`la somma dei numeri è ${summNum}`);
+
+// Funzione se è pari il valore è True
+function isEven(number) {
+    if(number % 2 === 0) {
+        return true;
+    }
+}
