@@ -1,3 +1,4 @@
+"use strict"
 // Palidroma
 // --------------------------------------------------------------------------------------------------
 // Chiedere all’utente di inserire una parola
@@ -5,12 +6,8 @@
 // (una parola che si legge allo stesso modo anche da destra versi sinistra, ad esempio anna, otto)
 
 // Chiedo una parola all'utente
-// let userWord = prompt("Inserisci una parola"); 
+let userWord = prompt("Inserisci una parola"); 
 
-let userWord = document.getElementById("word-user").value;
-
-let btnCheck = document.getElementById("check");
-btnCheck.addEventListener("click", function () {
     // Funzione in cui si lavora la parola
     function palindrome(word){
         // Con .split si divide in una sorta di array ogni lettera della singola parola con una virgola
@@ -34,18 +31,8 @@ btnCheck.addEventListener("click", function () {
         return wordJoin;
     }
     
-    
 
 // la parola palindroma è uguale a quella inserita dall'utente
 let wordPalindrome = palindrome (userWord);
 console.log(wordPalindrome);
-    })
 
-
-
-const btnCancel = document.getElementById("cancel");
-btnCancel.addEventListener("click", function () {
-        // sparizione parametri
-        document.getElementById("result").value = "";
-        document.getElementById("word-user").value = "";
-    })

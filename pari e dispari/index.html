@@ -8,7 +8,19 @@
 </head>
 <body>
     <main>
-        
+        <select class="form-select border-2 my-border-color-primary text-center col-5" name="scelta" id="even-odd">
+            <option value="pari">Pari</option>
+            <option value="dispari">Dispari</option>
+            
+        <div class="col-5 mb-3">
+            <label for="formGroupExampleInput" id="word-user" class="form-label">Inserisci un numero da 1 a 5</label>
+            <input type="text" class="form-control" id="input-user" placeholder="Inserisci un numero">
+        </div>
+        <div class="buttons d-flex justify-content-center mt-5 mb-3 gap-4">
+            <input class="btn btn-primary my-primary-color border-3 bg-body-secondary border-secondary fw-bold" id="check" type="button" value="Verifica">
+            <input class="btn btn-primary my-primary-color border-3 bg-body-secondary border-secondary fw-bold" id="cancel" type="reset" value="Riprova">
+        </div>
+        <p id="result"></p>
     </main>
 
     <script src="script.js"></script>
