@@ -8,58 +8,51 @@
 // Dichiariamo chi ha vinto.
 
 // Chiedo prima di scegliere pari o dispari e poi di inserire un numero da 1 a 5 all'utente
-// let evenOdd = prompt("Scegli pari o dispari");
-// let choiceNumber = Number(prompt("Inserisci un numero da 1 a 5"));
 
+let choiseEvenOdd = prompt("scegli: pari o dispari");
+let userNum = parseInt(prompt("scrivi un numero da 1 a 5"));
 
-let choiceNumber = document.getElementById ("input-user").value;
-let evenOdd = document.getElementById ("even-odd")
-// funzione in cui si genera il numero random da 1 a 5 del pc
-function numberPc(min, max) { 
-    return Math.floor(Math.random() * (max - min) ) + min;
+// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+
+function randomPcNum(){
+   let pcNum = Math.floor(Math.random() * 5) + 1;
+    return pcNum;
 }
 
-const btnCheck = document.getElementById("check");
-btnCheck.addEventListener("click", function () {
-let numRandomPc = parseInt(numberPc(1, 5));
-console.log(`Il numero random del Pc è ${numRandomPc}`)
-// Somma numero utente e numero pc
-let summNum = (Number(choiceNumber) + numRandomPc);
-console.log(`la somma dei numeri è ${summNum}`);
+let randNum = randomPcNum();
 
-// Funzione se è pari il valore è True
-function isEven(number) {
-    if(number % 2 === 0) {
+// Sommiamo i due numeri
 
-        return true;
-    } else {
+let sum = randomPcNum() + userNum;
 
-        return false
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+
+function evenOdd(number) {
+    let num = "";
+    if(number % 2 === 0){
+        num = "pari";
+    }else{
+        num = "dispari";
     }
-    
+    return num;
 }
 
-// Condizione se la somma dei numeri è pari il valore è "pari", altrimenti è "dispari"
-if(isEven(summNum)){
-    summNum === "even" && summNum === true;
-    console.log("la somma è pari")
-} else {
-    summNum === "odd" && summNum === false;
-    console.log("La somma è dispari")
-}
+let result = evenOdd(sum);
 
-// condizioni per vedere se l'utente ha vinto oppre no
-if (summNum == "even" && evenOdd == "pari") {
+// Dichiariamo chi ha vinto.
+// Se nel prompt l'utente ha scelto pari, ed il risultato della somma dei numeri è pari, l'utente ha vinto. 
+// Idem se ha scelto dispari ed il numero è dispari.
+// Se nel prompt non ha inserito le parole pari o dispari, facciamolo sapere all'utente. 
+
+if(choiseEvenOdd === "pari") {
     console.log("Hai vinto!");
-} else if (summNum == "odd" && evenOdd == "dispari"){
-    console.log("Hai vinto, bravo!");
-} else {
-    console.log("Hai perso, riprova!");
+}else if(choiseEvenOdd === "dispari"){
+    console.log("Hai perso!");
+}else{
+    console.log("Non hai scelto pari o dispari");
 }
-})
 
-const btnCancel = document.getElementById("cancel");
-btnCancel.addEventListener("click", function () {
-        // sparizione parametri 
-        document.getElementById("input-user").value = "";
-})
+console.log("Hai scelto:", choiseEvenOdd)
+console.log("il numero del pc è:", randNum);
+console.log("il numero che hai scelto è:", userNum);
+console.log("la somma dei numeri è:", result);
